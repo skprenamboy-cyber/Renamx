@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENAMX</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at center, #062b18 0%, #020806 45%, #000 100%);
+      color: #00ff88;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 3px,
+        rgba(0,255,120,.025) 4px
+      );
+    }
+
+    .box {
+      width: 90%;
+      max-width: 600px;
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid #00ff88;
+      border-radius: 18px;
+      background: rgba(0, 20, 10, .88);
+      box-shadow:
+        0 0 15px #00ff88,
+        inset 0 0 30px rgba(0,255,136,.08);
+      animation: pulse 2s infinite alternate;
+    }
+
+    .profile {
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      border: 3px solid #00ff88;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      box-shadow: 0 0 25px #00ff88;
+      background: #00150b;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 7px;
+      text-shadow: 0 0 15px #00ff88;
+      margin-bottom: 12px;
+    }
+
+    .status {
+      color: #7affb9;
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-bottom: 28px;
+    }
+
+    .message {
+      color: white;
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      color: #00ff88;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00ff88;
+    }
+
+    .line {
+      width: 70%;
+      height: 1px;
+      background: #00ff88;
+      margin: 20px auto;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    .footer {
+      font-size: 11px;
+      color: #4cff9b;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse {
+      from {
+        box-shadow: 0 0 10px #00ff88,
+                    inset 0 0 20px rgba(0,255,136,.05);
+      }
+      to {
+        box-shadow: 0 0 28px #00ff88,
+                    inset 0 0 35px rgba(0,255,136,.12);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scanlines"></div>
+
+  <div class="box">
+
+    <div class="profile">RX</div>
+
+    <h1>RENAMX</h1>
+
+    <div class="status">
+      SYSTEM ONLINE • PROJECT RENAMX
+    </div>
+
+    <div class="line"></div>
+
+    <div class="message">
+      Semua data sudah lengkap.<br><br>
+
+      <span class="highlight">
+        Mari kita tunjukkan apa itu permainan yang sebenarnya.
+      </span>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="footer">
+      RENAMX • THE GAME HAS BEGUN
+    </div>
+
+  </div>
+
+</body>
+</html>
